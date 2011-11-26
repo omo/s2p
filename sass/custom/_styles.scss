@@ -1,0 +1,36 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+
+$header-padding-top: 130px;
+$header-image-height: 179px;
+
+body > header {
+     background-image: url(/images/title-bg.png);
+     height: $header-image-height - $header-padding-top;
+     padding-bottom: 0em;
+     padding-top: $header-padding-top;
+     padding-left: 25px;
+}
+
+body > header h1 {
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+html {
+  background-color: $page-bg;
+  background-image: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:visited {
+  text-decoration: underline;
+}
+
+.disclaimer {
+  font-size: smaller;
+}

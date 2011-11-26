@@ -1,0 +1,7 @@
+
+Redirect permanent /index.rdf http://steps.dodgson.org/atom.xml
+Redirect permanent /no_comments.rdf http://steps.dodgson.org/atom.xml
+
+RewriteEngine On
+RewriteCond %{QUERY_STRING} ^date=(.*)
+RewriteRule ^(.*)$ http://stepped.dodgson.org/?date=%1 [R=301,L]
