@@ -48,10 +48,10 @@ GitHub co-founder の [Tom Preston-Werner](http://tom.preston-werner.com/) (以�
 それほどすばらしくない部分があることもわかっていたから、叶わぬ過剰な期待もなかった。
 
 良いソースコードは良いエンジニアリング、よいプログラマの証左でもある。
-コード自体は良いのい周りのインフラやプロセス、
+コード自体は良いのに周りのインフラやプロセス、
 コードを書いたプログラマがダメなことは少ない。
 コードのスナップショットだけでなく、
-レポジトリの履歴やバグトラック, CI のダッシューボードなども公開されているなら
+レポジトリの履歴やバグトラック, CI のダッシュボードなども公開されているなら
 仕事の様子をもっと詳しく見ることができる。実際にパッチを送ってみることだってできる。
 一日のコミット量やパッチの粒度、ブランチの使い方、インフラの自動化具合、
 バグやパッチをめぐる議論の口調、ツリーの greenness。
@@ -76,7 +76,7 @@ GitHub co-founder の [Tom Preston-Werner](http://tom.preston-werner.com/) (以�
 愛着のある仕事のコードはどんなものだろう。
 これまでに書いたコードを振り返ると、自分が多くの部分を書いたものには愛着を感じた。
 半分・・・は無理でも、ある規模のコードで 2-3 割を占めれば愛着がうまれる。
-そんなコードのを書いた職場やプロジェクトを移るときは、
+そんなコードを書いた職場やプロジェクトを移るときは、
 もうすこし良くしてあげたかったと心残りがある。
 
 この愛着は所有感の表れだと思う。
@@ -123,7 +123,7 @@ Chromium 用の高速ビルドツールである
 [Ninja](https://github.com/martine/ninja) はなぜか github にホストされており、
 プロジェクトが余暇にうまれたことを示している。これも愛着の表れとみていい。
 
-オープンソースな仕事でなくても、仕事のためのツールやライブラリを余暇に書いて公開にしておき、
+オープンソースな仕事でなくても、仕事のためのツールやライブラリを余暇に書いて公開しておき、
 それを仕事に持ち込んで使うことはある。特に Web で仕事をする人にはそんなところがある。
 
 仕事のプロジェクトがオープンソースになっていると、こうした仕事関係余暇ハックの敷居はさがる。
@@ -142,7 +142,7 @@ Twitter の Jeremy Cole は、
 > You are sure the company couldn't just kill the project because the code is out there,
 > and if they did, you could keep working on if you really liked it.
 > 
-> See you can free to think about how you are building it, 
+> See. You can free to think about how you are building it, 
 > how new architecture it should have, and all that.
 >
 > While you take a shower, while you are driving around or whatever you are doing, 
@@ -150,8 +150,8 @@ Twitter の Jeremy Cole は、
 >
 > And that is one of the awesome things in open-source.
 
-愛着のある仕事コードがオープンソースであることの利点を端的に説明していると思う。
-かつて MySQL に勤めていた Jeremy Cole は退社後も MySQL にパッチを書いていたというからなかなか説得力がある。 
+愛着のある仕事コードがオープンソースであることの良さを端的に説明していると思う。
+かつて MySQL に勤めていた Jeremy Cole は退職後も MySQL にパッチを書いていたというからなかなか説得力がある。 
 Twitter 自身にも、もじょ先生のいう積極的なオープンソース化を地でいく所があるよね。
 
 ほしいと言ってみる
@@ -204,8 +204,8 @@ Twitter 自身にも、もじょ先生のいう積極的なオープンソース
 そして仕事コードのうち表に出しても角が立たなそうな部分　(もじょ先生によれば "almost everything") 
 を少しずつ仕事用 Github に移して開発を進め、
 区切りのいいところで交渉してレポジトリを private から public に flip する。
+そのくらい融通の効く会社がたくさんあると、プログラマの仕事はもっと楽しくなることだろう。
 
-そのくらい融通の効く会社がたくさんあると、プログラマの仕事はもっと楽しくなるだろう。
 ある日、よその会社で働く友達のコミットにバグをみつけた。昼休みにちょこっと直して pull request:
 
     commit 80e62a7654637d9ed930a2818c28b20cc794fcc8 (HEAD, master)
