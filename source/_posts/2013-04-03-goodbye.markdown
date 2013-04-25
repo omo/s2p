@@ -1,0 +1,32 @@
+---
+layout: post
+title: "瞬くあいだに時はながれて"
+date: 2013-04-03 19:56
+comments: true
+categories: 
+---
+
+![cover](http://farm1.staticflickr.com/37/119593660_71528eadca_z.jpg)
+
+[最初のバグ修正](http://trac.webkit.org/changeset/52388) をレビューしてくれたのはたぶん、Apple の Darin Adler だったと思う。雑誌連載のねたづくりに書いたパッチだった。このあとも Darin Adler には度々レビューをしてもらった。私にとって、Bugzilla 界隈でのメンターはこのひとだ。あるとき `ASSERT_NO_EXCEPTION`  という小粋なマクロを私が[発明した](http://trac.webkit.org/changeset/90911)際も、彼は私にかわりメーリングリストで[宣伝をしてくれた](http://markmail.org/thread/akz2cmwch4meueda)。何かをわかりあえたと思った。
+
+[最初のリグレッションとその修正](https://bugs.webkit.org/show_bug.cgi?id=34880)は 6 つ目と 7 つ目のパッチで...仕事にする前からエンバグしてたわけですが... KDE の Nicholas Zimmerman が見てくれた。彼はそのあと BlackBerry の会社に入ったと聞いたけど、最近は姿をみない。当時の SVG は無法地帯で、やんちゃなパッチもけっこう見逃してもらえた。Zimmerman, KSVG からの upstream をやり切ったときはまだ高校生だったらしい。すごいハッカーもいるもんだ。いま何してるのかな。
+
+`ASSET_NO_EXCEPTION` はさておき、もう少し役にたったとおもわれる仕事はテストのスクリプトからライブラリの内部にアクセスする API [window.intenrals](http://trac.webkit.org/browser/trunk/Source/WebCore/testing/Internals.idl) の追加。これは[二回目の Contributors Meeting](http://trac.webkit.org/wiki/April%202011%20Meeting) で必要性を売り込んだ力作。といっても、実はもたもたしてたら最終的なコードは[同僚が書いてくれちゃったんだけど](https://lists.webkit.org/pipermail/webkit-dev/2011-June/016935.html)。最近は [濫用するな](http://markmail.org/thread/zu467z2lw26m34t7) と怒る人がでるくらいにはよく使われており満足。こんな当たり前の改善をする余地がある、そのことに当時は驚いていた。
+
+もっと趣味色の強い仕事としては、手動で管理されていたリンカ用のシンボルリストをコード内の属性(メタデータ)に書き換える[パッチなんてのも書いた](http://trac.webkit.org/changeset/106606)。更新忘れのせいでしょっちゅうビルドを壊すその不愉快なリストをなんとかしたかった。最初は wxWidget port のメンテナ Kevin Ollivier が[頑張って直そうとしていた](http://markmail.org/thread/dhnqewjeopfk74jp)ものの、目視頼みの作業は難航していた。なんとか自動化できないかと思い立った私は [Clang のプラグインと Python で](https://github.com/omo/ListExportables) 書き換えツールをつくって手を貸した。Clang のプラグインを書きたかっただけだろといわれればその通りで、たぶんヒマだったんだな。
+
+このあそび、プラグイン自体は一日二日で書けたもののビルドシステムの修正なんかに大変時間がかかり、楽しみの代償を学んだのだった。結局のところ駆逐できたシンボルファイルは一部だけで、大きいのは残ったまま。Kevin Ollivier が旅行で東京にきたとき、彼とは一度ごはんをたべた。この余暇オープンソースプログラマがどんな人かを知った。
+
+そのほか tDiary が 3 タブなのは酷いと憤り CSS の tab-size プロパティを[実装してみたり](http://trac.webkit.org/changeset/116723)もした。ぜんぜんレビューされなくて、コードを書いてからチェックインまで一年以上かかった。もっとも私のやるきもぜんぜんだったからレビュアのせいばかりにはできない。私はその間に Octopress に乗り換えてしまった。レビューしてくれたのは Netscape の末裔にして CSS の達人である Simon Fraser。
+
+枚挙はつづく。本業でない仕事ほどよく覚えている。仕事と呼ぶのも気が引ける。ただ戯れていただけだ。[例の新しい仕事場](http://blog.chromium.org/2013/04/blink-rendering-engine-for-chromium.html)は、そろそろ真面目に働けと私を急かすだろう。
+
+それはいつかおこる運命だったと私には思える。でもまあ、寂しい。このプロジェクト、けっこう好きだったからなあ。いろいろお世話になりました。ありがとう。迷惑かけてごめん。でも少しはいいこともしたよね。これからもお互いうまくやれるよね。瞬くあいだに時はながれて、昔話にできるよね。
+
+![cover](http://farm1.staticflickr.com/46/141357725_2f07cfa004_z.jpg)
+
+----
+
+ * http://www.flickr.com/photos/zrahen/119593660/
+ * http://www.flickr.com/photos/mcinteractivity/7068430217/

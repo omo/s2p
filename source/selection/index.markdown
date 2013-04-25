@@ -10,6 +10,12 @@ footer: true
 プログラマの生活と意見
 --------------------------------
 
+2012:
+
+ * [コードレビューの話](http://steps.dodgson.org/b/2012/08/18/code-review-styles/) と [つづき](http://steps.dodgson.org/b/2012/12/30/code-review-from-lowland/)
+ * [ホッピングの話](http://steps.dodgson.org/b/2012/05/31/on-hopping/) と [つづき](http://steps.dodgson.org/b/2012/06/03/on-hopping-continued/)
+ * [殺伐荒野コーディング](http://steps.dodgson.org/b/2012/02/19/wild-coding/)
+
 2011:
 
  * [タダ飯よりも素敵なものは](http://steps.dodgson.org/b/2011/11/27/something-better-than-a-free-lunch/)
@@ -89,6 +95,12 @@ footer: true
 
 テクノロジー外野席
 --------------------------------
+
+2012:
+
+ * [エデンの園でおきたこと](http://steps.dodgson.org/b/2012/12/19/dom-and-gc-or-what-happend-at-eden/)
+ * [炭鉱の庭師](http://steps.dodgson.org/b/2012/05/20/gardening-with-canaries/)
+ * [WebKit2 と愉快な仲間たち](http://steps.dodgson.org/b/2012/03/28/webkit2-and-other-approaches/)
 
 2011:
 
@@ -236,6 +248,7 @@ footer: true
 
 訳しもの:
 
+ * [ファイルたちの王](http://steps.dodgson.org/b/2012/02/26/lord-of-the-files/)
  * [翻訳不完全リスト](http://d.hatena.ne.jp/yomoyomo/20070907/omotrans), [補足](http://dodgson.org/omo/t/?date=20070908)
    * [Consistent Hashing](http://dodgson.org/omo/t/?date=20071201) と [Eventually Consistent](http://dodgson.org/omo/t/?date=20071226)
    * [Firefox3 のメモリ使用量](http://www.hyuki.com/yukiwiki/wiki.cgi?Firefox3MemoryUsage)
