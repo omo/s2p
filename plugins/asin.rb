@@ -24,6 +24,7 @@ module Jekyll
     def item_lookup(asin)
       asin.strip!
       return @result_cache[asin] if @result_cache.has_key?(asin)
+      sleep(0.1)
       il = Amazon::AWS::ItemLookup.new('ASIN', {'ItemId' => asin})
       resp = Amazon::AWS::Search::Request.new.search(il)
       @result_cache[asin] = resp

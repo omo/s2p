@@ -15,6 +15,7 @@ group :development do
   gem 'liquid', '~> 2.3.0'
 
   gem 'ruby-aaws'
+  gem 'iconv'
 end
 
 gem 'sinatra', '~> 1.3.2'
