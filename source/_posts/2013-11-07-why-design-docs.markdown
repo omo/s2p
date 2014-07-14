@@ -4,6 +4,7 @@ title: "Design Docs はなんのため?"
 date: 2013-11-07 21:47
 comments: true
 categories: 
+published: false
 ---
 
 "[「書く」のは特別な道具](http://d.hatena.ne.jp/naoya/20131107)" という記事のなかで検索会社の Design Docs というやり方が

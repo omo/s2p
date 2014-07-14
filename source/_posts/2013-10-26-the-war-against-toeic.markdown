@@ -6,7 +6,7 @@ comments: true
 categories: 
 ---
 
-![foreign books](http://farm1.staticflickr.com/87/257737706_47925ecf19_z.jpg?zz=1)
+![foreign books](http://farm1.staticflickr.com/87/257737706_47925ecf19_z.jpg)
 
 社内で開かれたワークショップ形式の研修に参加したのは一年前、ちょうど今頃のこと。
 それはたぶんチームワークのような何かを学ぶ会だったはずだけど、

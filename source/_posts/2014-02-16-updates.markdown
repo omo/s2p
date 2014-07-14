@@ -1,0 +1,24 @@
+---
+layout: post
+title: "近況"
+date: 2014-02-16 23:41
+comments: true
+categories: 
+---
+
+![This is not where I am](http://farm2.staticflickr.com/1349/531354977_714b6268a1_b.jpg)
+
+ふと思い立ち転勤して [Sunnyvale, CA](https://www.google.com/search?q=Sunnyvale%2C+CA) にひっこしました。
+会社がある Mountain View の隣町。写真はたぶんサンフランシスコです。つまり関係ない。
+飽きるか挫けるかクビになるまでこのへんにいる予定です。
+東京のみなさまお世話になりました。近所のみなさま適当にあそんでください。
+ええとその、私がクルマを運転できるようになったあとで...
+
+船便で送った荷物はあと一ヶ月くらい届かず、通販で買ったマットレスもあと十日は届かず、
+やむなく借り物などで細々と暮らし中。ただし肉ばっかり食ってるせいで脇腹は太々してきた。やばい。
+
+とりあえず自宅が IP reachable になった旨を記録しておきます。
+
+----
+
+ * 写真: http://www.flickr.com/photos/thomashawk/531354977/
