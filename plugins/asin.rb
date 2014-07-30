@@ -5,14 +5,52 @@
 #
 # Example usage: {% gist 1027674 gist_tag.rb %} //embeds a gist for this plugin
 
-require 'amazon/aws'
-require 'amazon/aws/search'
+require 'asin'
 require 'cgi'
+require 'httpi'
+require 'fileutils'
+
+def read_rc
+  key_id = nil
+  secret_key_id = nil
+  associate = nil
+  eval(open(File.expand_path("~/.amazonrc")).read, binding)
+
+  {
+    :key_id => key_id,
+    :secret_key_id => secret_key_id,
+    :associate => associate
+  }
+end
+
+ASIN::Configuration.configure do |config|
+  rc = read_rc()
+  config.secret         = rc[:secret_key_id]
+  config.key            = rc[:key_id]
+  config.associate_tag  = rc[:associate]
+  config.host = 'ecs.amazonaws.jp'
+end
+
+HTTPI.adapter = :curb
 
 module Jekyll
   class AmazonResultCache
+    CACHE_DIR = "./.aisn"
+
     def initialize
       @result_cache = {}
+      FileUtils::mkdir_p(CACHE_DIR)
+    end
+
+    def read_cache(code)
+      path = File.join(CACHE_DIR, code)
+      return nil unless File.exists?(path)
+      File.open(path, "r") { |f| Marshal.load(f.read) }
+    end
+
+    def write_cache(code, obj)
+      path = File.join(CACHE_DIR, code)
+      File.open(path, "w") { |f| f.write(Marshal.dump(obj)) }
     end
 
     @@instance = AmazonResultCache.new
@@ -21,14 +59,15 @@ module Jekyll
       @@instance
     end
 
-    def item_lookup(asin)
-      asin.strip!
-      return @result_cache[asin] if @result_cache.has_key?(asin)
-      sleep(0.1)
-      il = Amazon::AWS::ItemLookup.new('ASIN', {'ItemId' => asin})
-      resp = Amazon::AWS::Search::Request.new.search(il)
-      @result_cache[asin] = resp
-      return resp
+    def item_lookup(code)
+      code = code.strip
+      hit = read_cache(code)
+      return hit if hit
+      sleep(0.5)
+      client = ASIN::Client.instance
+      got = client.lookup(code)
+      write_cache(code, got)
+      got
     end
 
     private_class_method :new
@@ -38,25 +77,25 @@ module Jekyll
     def initialize(tag_name, text, token)
       super
       @id, @description = text.split(",")
-      resp = AmazonResultCache.instance.item_lookup(@id)
-      @item = resp.item_lookup_response[0].items[0].item[0]
+      @asin = AmazonResultCache.instance.item_lookup(@id)
     end
+
     def text
-      (@description or @item.item_attributes.title.to_s).strip
+      #p @asin
+      (@description or @asin.first.item_attributes.title).strip
     end
   end
 
   class AsinTag < AsinTagBase
     def render(context)
-      url = @item.detail_page_url.to_s
-      '<a href="%s">%s</a>' % [url, CGI::unescape(text)]
+      '<a href="%s">%s</a>' % [@asin.first.detail_page_url, CGI::unescape(text)]
     end
   end
-  
+
   class AsinImgTag < AsinTagBase
     def render(context)
-      url = @item.detail_page_url.to_s
-      image = @item.image_sets.image_set[0].large_image.url
+      url = @asin.first.detail_page_url
+      image = @asin.first.large_image.url
       '<a href="%s"><img class="asin" src="%s" title="%s" /></a>' % [url, image, CGI::unescape(text)]
     ensure
       if $!
