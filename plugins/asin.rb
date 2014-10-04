@@ -82,7 +82,8 @@ module Jekyll
 
     def text
       #p @asin
-      (@description or @asin.first.item_attributes.title).strip
+      desc = @description ? CGI::escape(@description): nil
+      (desc or @asin.first.item_attributes.title).strip
     end
   end
 
