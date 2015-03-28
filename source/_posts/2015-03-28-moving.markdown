@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Moving"
+date: 2015-03-28 14:44
+comments: true
+categories:
+---
+
+[anemone.dodgson.org](http://anemone.dodgson.org/) に[移動](http://anemone.dodgson.org/2015/03/a-flower-name/)しました。
